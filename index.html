@@ -1,68 +1,82 @@
-<!-- index.html -->
-
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>The Vineyard Committee on Hunger</title>
     <style>
         body {
-                background-color: black;
-                color: white;
-                font-family: "Courier New", Courier, monospace;
-            }
+            background-color: black;
+            color: white;
+            font-family: "Courier New", Courier, monospace;
+            margin: 0; /* Remove default body margin */
+            padding: 0; /* Remove default body padding */
+        }
 
-            h1, h2, h3 {
-                color: white;
-                text-align: center; /* Center the heading */
-            }
+        h1, h2, h3 {
+            color: white;
+            text-align: center;
+        }
 
-            nav {
-                background-color: purple;
-                padding: 10px;
-            }
+        nav {
+            background-color: purple;
+            padding: 10px;
+        }
 
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex; /* Use flexbox for horizontal navigation on mobile */
+            flex-wrap: wrap; /* Allow navigation items to wrap on small screens */
+            justify-content: center; /* Center the navigation items */
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 5px; /* Add some spacing between navigation items */
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        nav ul li a:hover {
+            background-color: yellow;
+            color: black;
+        }
+
+        footer {
+            background-color: purple;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .banner {
+            background-color: green;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .banner a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .banner a:hover {
+            background-color: yellow;
+            color: black;
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 600px) {
+            /* Adjust styles for screens with a maximum width of 600px (typical mobile devices) */
             nav ul {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
+                flex-direction: column; /* Change navigation to vertical stack on small screens */
+                align-items: center; /* Center the navigation items vertically */
             }
-
-            nav ul li {
-                display: inline;
-            }
-
-            nav ul li a {
-                color: white;
-                text-decoration: none;
-                padding: 10px;
-            }
-
-            nav ul li a:hover {
-                background-color: yellow;
-                color: black;
-            }
-
-            footer {
-                background-color: purple;
-                padding: 10px;
-                text-align: center;
-            }
-
-            .banner {
-                background-color: green;
-                padding: 10px;
-                text-align: center;
-            }
-
-            .banner a {
-                color: white;
-                text-decoration: none;
-            }
-            
-            .banner a:hover {
-                background-color: yellow;
-                color: black;
-            }
+        }
     </style>
 </head>
 <body>
@@ -79,10 +93,10 @@
         </ul>
     </nav>
 
-<!-- Green banner -->
-<div class="banner">
-    <a href="donations.html" target="_blank">Looking to feed people? Donate today!</a>
-        </div>
+    <!-- Green banner -->
+    <div class="banner">
+        <a href="donations.html" target="_blank">Looking to feed people? Donate today!</a>
+    </div>
 
     <!-- Home page -->
     <h1>Welcome to The Vineyard Committee on Hunger</h1>
