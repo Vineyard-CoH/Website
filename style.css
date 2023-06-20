@@ -19,6 +19,8 @@ nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: flex-end; /* Align navigation to the right */
 }
 
 nav ul li {
@@ -74,10 +76,23 @@ footer {
         font-size: 14px;
     }
 
+    nav {
+        justify-content: flex-end; /* Align navigation to the right on small screens */
+    }
+
     nav ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        display: none; /* Hide the navigation list by default */
+    }
+
+    nav ul.show {
+        display: flex; /* Show the navigation list when the mobile menu is toggled */
+        flex-direction: column;
+        position: absolute;
+        top: 40px; /* Adjust the distance from the top as needed */
+        right: 10px; /* Adjust the distance from the right as needed */
+        background-color: purple;
+        padding: 10px;
+        z-index: 1;
     }
 
     nav ul li {
@@ -91,5 +106,12 @@ footer {
 
     .banner {
         padding: 5px;
+    }
+
+    .mobile-menu {
+        display: inline-block;
+        color: white;
+        padding: 10px;
+        cursor: pointer;
     }
 }
