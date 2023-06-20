@@ -20,7 +20,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: flex-end; /* Align navigation to the right */
+    justify-content: center; /* Center the navigation items */
 }
 
 nav ul li {
