@@ -42,6 +42,9 @@ footer {
     background-color: purple;
     padding: 10px;
     text-align: center;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
 }
 
 .banner {
