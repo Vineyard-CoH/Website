@@ -79,7 +79,8 @@ footer {
 
 @media only screen and (max-width: 480px) {
     body {
-        font-size: 14px;
+        font-size: 16px;
+        line-height: 1.5;
     }
 
     nav {
@@ -108,6 +109,7 @@ footer {
 
     nav ul li a {
         padding: 8px;
+        font-size: 16px;
     }
 
     .banner {
