@@ -7,7 +7,7 @@
 <body>
     <!-- Navigation menu -->
     <nav>
-        <ul>
+        <ul class="nav-menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="serving_hands.html">Serving Hands</a></li>
             <li><a href="family_to_family.html">Family to Family</a></li>
@@ -26,7 +26,7 @@
     <script>
         // JavaScript code to toggle the mobile menu
         var mobileMenu = document.querySelector('.mobile-menu');
-        var navList = document.querySelector('nav ul');
+        var navList = document.querySelector('.nav-menu');
 
         mobileMenu.addEventListener('click', function() {
             navList.classList.toggle('show');
