@@ -1,88 +1,17 @@
-<!-- index.html -->
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>The Vineyard Committee on Hunger</title>
-    <style>
-        body {
-                background-color: black;
-                color: white;
-                font-family: "Courier New", Courier, monospace;
-            }
-
-            h1, h2, h3 {
-                color: white;
-                text-align: center; /* Center the heading */
-            }
-
-            nav {
-                background-color: purple;
-                padding: 10px;
-            }
-
-            nav ul {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-            }
-
-            nav ul li {
-                display: inline;
-            }
-
-            nav ul li a {
-                color: white;
-                text-decoration: none;
-                padding: 10px;
-            }
-
-            nav ul li a:hover {
-                background-color: yellow;
-                color: black;
-            }
-
-            footer {
-                background-color: purple;
-                padding: 10px;
-                text-align: center;
-            }
-
-            .banner {
-                background-color: green;
-                padding: 10px;
-                text-align: center;
-            }
-
-            .banner a {
-                color: white;
-                text-decoration: none;
-            }
-            
-            .banner a:hover {
-                background-color: yellow;
-                color: black;
-            }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <!-- Navigation menu -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="serving_hands.html">Serving Hands Monthly Schedule</a></li>
-            <li><a href="food_baskets.html">Food Baskets Schedule</a></li>
-            <li><a href="fundraisers.html">Upcoming Fundraisers</a></li>
-            <li><a href="membership_application.html">Committee Membership Application</a></li>
-            <li><a href="volunteer_opportunities.html">Volunteer Opportunities</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-        </ul>
-    </nav>
+    <div id="navigation-placeholder"></div>
 
-<!-- Green banner -->
-<div class="banner">
-    <a href="donations.html" target="_blank">Looking to feed people? Donate today!</a>
-        </div>
+    <!-- Green banner -->
+    <div class="banner">
+        <a href="donations.html" target="_blank">Looking to feed people? Donate today!</a>
+    </div>
 
     <!-- Home page -->
     <h1>Welcome to The Vineyard Committee on Hunger</h1>
@@ -92,5 +21,20 @@
     <footer>
         <p>&copy; 2023 Vineyard Committee on Hunger. All rights reserved.</p>
     </footer>
+
+    <!-- Load the navigation bar dynamically -->
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            var navigationPlaceholder = document.getElementById('navigation-placeholder');
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    navigationPlaceholder.innerHTML = this.responseText;
+                }
+            };
+            xhttp.open('GET', 'navigation.html', true);
+            xhttp.send();
+        });
+    </script>
 </body>
 </html>
