@@ -3,6 +3,7 @@ body {
     background-color: black;
     color: white;
     font-family: "Courier New", Courier, monospace;
+    line-height: 1.5; /* Increase line height for better readability */
 }
 
 h1, h2, h3 {
@@ -75,12 +76,16 @@ footer {
     nav ul li a {
         padding: 5px;
     }
+
+    h1, h2, h3 {
+        font-size: 24px; /* Increase heading font size for better readability */
+    }
 }
 
 @media only screen and (max-width: 480px) {
     body {
         font-size: 16px;
-        line-height: 1.5;
+        line-height: 1.6; /* Further increase line height for better readability */
     }
 
     nav {
