@@ -115,3 +115,18 @@ footer {
         cursor: pointer;
     }
 }
+  <div class="banner">
+        <a href="donations.html" target="_blank">Looking to feed people? Donate today!</a>
+    </div>
+
+    <script>
+        // JavaScript code to toggle the mobile menu
+        var mobileMenu = document.querySelector('.mobile-menu');
+        var navList = document.querySelector('nav ul');
+
+        mobileMenu.addEventListener('click', function() {
+            navList.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
