@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Vineyard Committee on Hunger - Volunteer Opportunities</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <!-- Navigation menu -->
+    <div id="navigation-placeholder"></div>
+
+    <!-- Green banner -->
+    <div class="banner">
+        <a href="donations.html" target="_blank">Looking to feed people? Donate today!</a>
+    </div>
+
+    <!-- Volunteer Opportunities page -->
+    <h1>Volunteer Opportunities</h1>
+    <p>Current volunteer opportunities:</p>
+    <ul>
+        <li>Delivery Drivers</li>
+        <li>Packing Bags</li>
+        <li>Clean up</li>
+    </ul>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Vineyard Committee on Hunger. All rights reserved.</p>
+    </footer>
+
+    <!-- Load the navigation bar dynamically -->
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            var navigationPlaceholder = document.getElementById('navigation-placeholder');
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    navigationPlaceholder.innerHTML = this.responseText;
+                }
+            };
+            xhttp.open('GET', 'navigation.html', true);
+            xhttp.send();
+        });
+    </script>
+</body>
+</html>
