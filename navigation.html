@@ -15,6 +15,7 @@
             <li><a href="fundraising.html">Fundraising</a></li>
             <li><a href="volunteering.html">Volunteering</a></li>
         </ul>
+        <div class="mobile-menu">&#9776;</div> <!-- Add the mobile menu button -->
     </nav>
 
     <!-- Green banner -->
@@ -22,5 +23,14 @@
         <a href="donations.html" target="_blank">Looking to feed people? Donate today!</a>
     </div>
 
+    <script>
+        // JavaScript code to toggle the mobile menu
+        var mobileMenu = document.querySelector('.mobile-menu');
+        var navList = document.querySelector('nav ul');
+
+        mobileMenu.addEventListener('click', function() {
+            navList.classList.toggle('show');
+        });
+    </script>
 </body>
 </html>
