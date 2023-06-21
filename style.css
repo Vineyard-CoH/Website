@@ -127,4 +127,10 @@ footer {
         padding: 10px;
         cursor: pointer;
     }
+
+    /* CSS rule for active mobile menu button */
+    .mobile-menu.active {
+        background-color: yellow;
+        color: black;
+    }
 }
