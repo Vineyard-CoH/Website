@@ -32,12 +32,21 @@
         <a href="donations.html" target="_blank">Looking to feed people? Donate today!</a>
     </div>
 
-    <script>
-        // JavaScript code to toggle the mobile menu
-        function toggleMenu() {
+<script>
+    // JavaScript code to toggle the mobile menu
+    function toggleMenu() {
+        var navMenu = document.querySelector('.nav-menu');
+        navMenu.classList.toggle('show');
+    }
+
+    // Close the mobile menu when a menu item is clicked
+    var menuItems = document.querySelectorAll('.nav-menu a');
+    for (var i = 0; i < menuItems.length; i++) {
+        menuItems[i].addEventListener('click', function () {
             var navMenu = document.querySelector('.nav-menu');
-            navMenu.classList.toggle('show');
-        }
-    </script>
+            navMenu.classList.remove('show');
+        });
+    }
+</script>
 </body>
 </html>
