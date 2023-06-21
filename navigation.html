@@ -47,6 +47,16 @@
             navMenu.classList.remove('show');
         });
     }
+
+    // Close the mobile menu when clicking outside of it
+    window.addEventListener('click', function (event) {
+        var navMenu = document.querySelector('.nav-menu');
+        var mobileMenu = document.querySelector('.mobile-menu');
+        if (!navMenu.contains(event.target) && !mobileMenu.contains(event.target)) {
+            navMenu.classList.remove('show');
+        }
+    });
 </script>
+
 </body>
 </html>
