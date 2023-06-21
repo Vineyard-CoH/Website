@@ -80,23 +80,12 @@ footer {
     h1, h2, h3 {
         font-size: 24px; /* Increase heading font size for better readability */
     }
-}
 
-@media only screen and (max-width: 480px) {
-    body {
-        font-size: 16px;
-        line-height: 1.6; /* Further increase line height for better readability */
-    }
-
-    nav {
-        justify-content: flex-end; /* Align navigation to the right on small screens */
-    }
-
-    nav ul {
+    .nav-menu {
         display: none; /* Hide the navigation list by default */
     }
 
-    nav ul.show {
+    .nav-menu.show {
         display: flex; /* Show the navigation list when the mobile menu is toggled */
         flex-direction: column;
         position: absolute;
@@ -107,18 +96,14 @@ footer {
         z-index: 1;
     }
 
-    nav ul li {
+    .nav-menu li {
         display: block;
         margin-bottom: 5px;
     }
 
-    nav ul li a {
+    .nav-menu li a {
         padding: 8px;
         font-size: 16px;
-    }
-
-    .banner {
-        padding: 5px;
     }
 
     .mobile-menu {
