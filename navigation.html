@@ -36,7 +36,14 @@
     // JavaScript code to toggle the mobile menu
     function toggleMenu() {
         var navMenu = document.querySelector('.nav-menu');
-        navMenu.classList.toggle('show');
+        var mobileMenu = document.querySelector('.mobile-menu');
+        if (navMenu.style.display === 'flex') {
+            navMenu.style.display = 'none';
+            mobileMenu.classList.remove('active');
+        } else {
+            navMenu.style.display = 'flex';
+            mobileMenu.classList.add('active');
+        }
     }
 
     // Close the mobile menu when a menu item is clicked
@@ -44,18 +51,11 @@
     for (var i = 0; i < menuItems.length; i++) {
         menuItems[i].addEventListener('click', function () {
             var navMenu = document.querySelector('.nav-menu');
-            navMenu.classList.remove('show');
+            var mobileMenu = document.querySelector('.mobile-menu');
+            navMenu.style.display = 'none';
+            mobileMenu.classList.remove('active');
         });
     }
-
-    // Close the mobile menu when clicking outside of it
-    window.addEventListener('click', function (event) {
-        var navMenu = document.querySelector('.nav-menu');
-        var mobileMenu = document.querySelector('.mobile-menu');
-        if (!navMenu.contains(event.target) && !mobileMenu.contains(event.target)) {
-            navMenu.classList.remove('show');
-        }
-    });
 </script>
 
 </body>
