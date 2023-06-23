@@ -105,9 +105,6 @@ footer {
         padding: 8px;
         font-size: 16px;
     }
-    .nav-menu.show {
-    display: block;
-}
 
     .mobile-menu {
         display: inline-block;
