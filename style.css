@@ -1,129 +1,54 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Navigation</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <style>
-        /* Global Styles */
-        body {
-            background-color: black;
-            color: white;
-            font-family: "Courier New", Courier, monospace;
-            line-height: 1.5; /* Increase line height for better readability */
-        }
+/* Mobile Responsiveness */
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
 
-        h1, h2, h3 {
-            color: white;
-            text-align: center;
-        }
+    nav ul li a {
+        padding: 5px;
+    }
 
-        nav {
-            background-color: purple;
-            padding: 10px;
-        }
+    h1, h2, h3 {
+        font-size: 24px; /* Increase heading font size for better readability */
+    }
 
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center; /* Center the navigation items */
-        }
+    .nav-menu {
+        display: none; /* Hide the navigation list by default */
+    }
 
-        nav ul li {
-            display: inline;
-        }
+    .nav-menu.show {
+        display: flex; /* Show the navigation list when the mobile menu is toggled */
+        flex-direction: column;
+        position: fixed; /* Make the menu fixed on the screen */
+        top: 10px; /* Adjust the distance from the top as needed */
+        right: 10px; /* Adjust the distance from the right as needed */
+        background-color: purple;
+        padding: 10px;
+        z-index: 1;
+        max-height: calc(100vh - 20px); /* Set the maximum height to fit within the viewport */
+        overflow-y: auto; /* Add vertical scroll when needed */
+    }
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            padding: 10px;
-        }
+    .nav-menu li {
+        display: block;
+        margin-bottom: 5px;
+    }
 
-        nav ul li a:hover {
-            background-color: yellow;
-            color: black;
-        }
+    .nav-menu li a {
+        padding: 8px;
+        font-size: 16px;
+    }
 
-        footer {
-            background-color: purple;
-            padding: 10px;
-            text-align: center;
-            display: flex;
-            justify-content: center; /* Center the content horizontally */
-            align-items: center; /* Center the content vertically */
-        }
+    .mobile-menu {
+        display: inline-block;
+        color: white;
+        padding: 10px;
+        cursor: pointer;
+    }
 
-        .banner {
-            background-color: green;
-            padding: 10px;
-            text-align: center;
-            display: flex;
-            justify-content: center; /* Center the content horizontally */
-            align-items: center; /* Center the content vertically */
-        }
-
-        .banner a {
-            color: white;
-            text-decoration: none;
-        }
-
-        .banner a:hover {
-            background-color: yellow;
-            color: black;
-        }
-
-        /* Mobile Responsiveness */
-        @media only screen and (max-width: 768px) {
-            body {
-                font-size: 16px;
-            }
-
-            nav ul li a {
-                padding: 5px;
-            }
-
-            h1, h2, h3 {
-                font-size: 24px; /* Increase heading font size for better readability */
-            }
-
-            .nav-menu {
-                display: none; /* Hide the navigation list by default */
-            }
-
-            .nav-menu.show {
-                display: flex; /* Show the navigation list when the mobile menu is toggled */
-                flex-direction: column;
-                position: fixed; /* Make the menu fixed on the screen */
-                top: 10px; /* Adjust the distance from the top as needed */
-                right: 10px; /* Adjust the distance from the right as needed */
-                background-color: purple;
-                padding: 10px;
-                z-index: 1;
-                max-height: calc(100vh - 20px); /* Set the maximum height to fit within the viewport */
-                overflow-y: auto; /* Add vertical scroll when needed */
-            }
-
-            .nav-menu li {
-                display: block;
-                margin-bottom: 5px;
-            }
-
-            .nav-menu li a {
-                padding: 8px;
-                font-size: 16px;
-            }
-
-            .mobile-menu {
-                display: inline-block;
-                color: white;
-                padding: 10px;
-                cursor: pointer;
-            }
-
-            /* CSS rule for active mobile menu button */
-            .mobile-menu.active {
-                background-color: yellow;
-                color: black;
-           
+    /* CSS rule for active mobile menu button */
+    .mobile-menu.active {
+        background-color: yellow;
+        color: black;
+    }
+}
