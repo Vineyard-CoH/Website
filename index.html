@@ -12,6 +12,20 @@
     <h1>Welcome to The Vineyard Committee on Hunger</h1>
     <p>Introduction to the organization and its mission.</p>
 
+        <!-- Load the navigation bar dynamically -->
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            var navigationPlaceholder = document.getElementById('navigation-placeholder');
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    navigationPlaceholder.innerHTML = this.responseText;
+                }
+            };
+            xhttp.open('GET', 'navigation.html', true);
+            xhttp.send();
+        });
+    </script>
 
 </body>
 </html>
