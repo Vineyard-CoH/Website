@@ -39,85 +39,49 @@ nav ul li a:hover {
     color: black;
 }
 
-footer {
+/* Dropdown Menu */
+.nav-menu {
+    display: none; /* Hide the navigation list by default */
+    position: absolute;
+    top: 100%; /* Position the dropdown menu below the navigation */
+    left: 0;
     background-color: purple;
     padding: 10px;
-    text-align: center;
-    display: flex;
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
+    z-index: 1;
 }
 
-.banner {
-    background-color: green;
-    padding: 10px;
-    text-align: center;
-    display: flex;
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
+.nav-menu.show {
+    display: block; /* Show the dropdown menu when the mobile menu is toggled */
+    max-height: calc(100vh - 20px); /* Set the maximum height to fit within the viewport */
+    overflow-y: auto; /* Add vertical scroll when needed */
 }
 
-.banner a {
+.nav-menu li {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.nav-menu li a {
+    padding: 8px;
+    font-size: 16px;
     color: white;
     text-decoration: none;
 }
 
-.banner a:hover {
+.nav-menu li a:hover {
     background-color: yellow;
     color: black;
 }
 
-/* Mobile Responsiveness */
-@media only screen and (max-width: 768px) {
-    body {
-        font-size: 16px;
-    }
+.mobile-menu {
+    display: inline-block;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
 
-    nav ul li a {
-        padding: 5px;
-    }
-
-    h1, h2, h3 {
-        font-size: 24px; /* Increase heading font size for better readability */
-    }
-
-    .nav-menu {
-        display: none; /* Hide the navigation list by default */
-    }
-
-    .nav-menu.show {
-        display: flex; /* Show the navigation list when the mobile menu is toggled */
-        flex-direction: column;
-        position: fixed; /* Make the menu fixed on the screen */
-        top: 10px; /* Adjust the distance from the top as needed */
-        right: 10px; /* Adjust the distance from the right as needed */
-        background-color: purple;
-        padding: 10px;
-        z-index: 1;
-        max-height: calc(100vh - 20px); /* Set the maximum height to fit within the viewport */
-        overflow-y: auto; /* Add vertical scroll when needed */
-    }
-
-    .nav-menu li {
-        display: block;
-        margin-bottom: 5px;
-    }
-
-    .nav-menu li a {
-        padding: 8px;
-        font-size: 16px;
-    }
-
-    .mobile-menu {
-        display: inline-block;
-        color: white;
-        padding: 10px;
-        cursor: pointer;
-    }
-
-    /* CSS rule for active mobile menu button */
-    .mobile-menu.active {
-        background-color: yellow;
-        color: black;
-    }
+/* CSS rule for active mobile menu button */
+.mobile-menu.active {
+    background-color: yellow;
+    color: black;
 }
