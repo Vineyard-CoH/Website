@@ -6,7 +6,7 @@
 </head>
 <body>
     <!-- Navigation menu -->
-    <div id="navigation-placeholder"></div>
+    <?php include 'navigation.html'; ?>
 
     <!-- Home page -->
     <h1>Welcome to The Vineyard Committee on Hunger</h1>
@@ -17,19 +17,5 @@
         <p>&copy; 2023 Vineyard Committee on Hunger. All rights reserved.</p>
     </footer>
 
-    <!-- Load the navigation bar dynamically -->
-    <script>
-        window.addEventListener('DOMContentLoaded', function () {
-            var navigationPlaceholder = document.getElementById('navigation-placeholder');
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function () {
-                if (this.readyState == 4 && this.status == 200) {
-                    navigationPlaceholder.innerHTML = this.responseText;
-                }
-            };
-            xhttp.open('GET', 'navigation.html', true);
-            xhttp.send();
-        });
-    </script>
 </body>
 </html>
