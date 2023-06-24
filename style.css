@@ -3,7 +3,6 @@ body {
     background-color: black;
     color: white;
     font-family: "Courier New", Courier, monospace;
-    line-height: 1.5; /* Increase line height for better readability */
 }
 
 h1, h2, h3 {
@@ -20,8 +19,6 @@ nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center; /* Center the navigation items */
 }
 
 nav ul li {
@@ -35,6 +32,28 @@ nav ul li a {
 }
 
 nav ul li a:hover {
+    background-color: yellow;
+    color: black;
+}
+
+footer {
+    background-color: purple;
+    padding: 10px;
+    text-align: center;
+}
+
+.banner {
+    background-color: green;
+    padding: 10px;
+    text-align: center;
+}
+
+.banner a {
+    color: white;
+    text-decoration: none;
+}
+
+.banner a:hover {
     background-color: yellow;
     color: black;
 }
@@ -84,27 +103,4 @@ nav ul li a:hover {
 .mobile-menu.active {
     background-color: yellow;
     color: black;
-}
-
-.banner {
-    background-color: green;
-    padding: 10px;
-    text-align: center;
-}
-
-.banner a {
-    color: white;
-    text-decoration: none;
-}
-
-.banner a:hover {
-    background-color: yellow;
-    color: black;
-}
-
-/* Hide the mobile menu button on non-mobile devices */
-@media only screen and (min-width: 768px) {
-    .mobile-menu {
-        display: none;
-    }
 }
