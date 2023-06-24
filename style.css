@@ -1,3 +1,72 @@
+/* Global Styles */
+body {
+    background-color: black;
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.5; /* Increase line height for better readability */
+}
+
+h1, h2, h3 {
+    color: white;
+    text-align: center;
+}
+
+nav {
+    background-color: purple;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center the navigation items */
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background-color: yellow;
+    color: black;
+}
+
+footer {
+    background-color: purple;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+}
+
+.banner {
+    background-color: green;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+}
+
+.banner a {
+    color: white;
+    text-decoration: none;
+}
+
+.banner a:hover {
+    background-color: yellow;
+    color: black;
+}
+
 /* Mobile Responsiveness */
 @media only screen and (max-width: 768px) {
     body {
