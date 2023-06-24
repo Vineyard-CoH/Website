@@ -37,7 +37,7 @@
     function toggleMenu() {
         var navMenu = document.querySelector('.nav-menu');
         var mobileMenu = document.querySelector('.mobile-menu');
-        navMenu.classList.toggle('show');
+        navMenu.classList.toggle('showMenu');
         mobileMenu.classList.toggle('active');
     }
 
@@ -47,11 +47,10 @@
         menuItems[i].addEventListener('click', function () {
             var navMenu = document.querySelector('.nav-menu');
             var mobileMenu = document.querySelector('.mobile-menu');
-            navMenu.classList.remove('show');
+            navMenu.classList.remove('showMenu');
             mobileMenu.classList.remove('active');
         });
     }
 </script>
-
 </body>
 </html>
