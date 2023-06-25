@@ -48,13 +48,11 @@
     </header>
 
     <nav id="navigation">
-        <a href="index.html" id="home-link">Home</a>
-        <a href="fundraising.html" id="fundraising-link">Fundraising</a>
-        <a href="volunteer.html" id="volunteer-link">Volunteering</a>
+        <div id="navigation-placeholder"></div>
     </nav>
 
     <div class="donate-bar">
-        <a href="donate.html" target="paypal.com">Donate</a>
+        <a href="donate.html" target="_blank">Donate</a>
     </div>
     
     <div id="content">
@@ -64,6 +62,20 @@
     <footer>
         &copy; 2023 Vineyard Committee on Hunger. Contact the webmaster at webmaster@vineyardhunger.org
     </footer>
-    
+
+    <script>
+        // Load the navigation content dynamically
+        window.addEventListener('DOMContentLoaded', function() {
+            var navigationPlaceholder = document.getElementById('navigation-placeholder');
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'helpnav.html', true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    navigationPlaceholder.innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send();
+        });
+    </script>
 </body>
 </html>
