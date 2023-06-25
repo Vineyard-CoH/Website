@@ -4,6 +4,7 @@
     <title>I Need Food</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="translation.css">
     <style>
         /* Add any additional styles specific to the food.html page here */
     </style>
@@ -21,8 +22,7 @@
         </div>
     </header>
 
-    <!-- Include the navigation -->
-    <!--#include virtual="foodnav.html" -->
+    <div id="navigation-placeholder"></div>
 
     <div id="content">
         <!-- Add the content specific to the food.html page here -->
@@ -32,5 +32,19 @@
         &copy; 2023 Vineyard Committee on Hunger. Entre em contato com o webmaster em webmaster@vineyardhunger.org
     </footer>
 
+    <script>
+        // Load the navigation content dynamically
+        window.addEventListener('DOMContentLoaded', function() {
+            var navigationPlaceholder = document.getElementById('navigation-placeholder');
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'foodnav.html', true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    navigationPlaceholder.innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send();
+        });
+    </script>
 </body>
 </html>
