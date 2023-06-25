@@ -4,7 +4,6 @@
     <title>I Want to Help</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="translation.css">
     <style>
         /* Add any additional styles specific to the help.html page here */
         .donate-bar {
@@ -63,35 +62,8 @@
     </div>
     
     <footer>
-        &copy; 2023 Vineyard Committee on Hunger. Entre em contato com o webmaster em webmaster@vineyardhunger.org
+        &copy; 2023 Vineyard Committee on Hunger. Contact the webmaster at webmaster@vineyardhunger.org
     </footer>
     
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Set default language based on stored value or English as fallback
-            var currentLanguage = localStorage.getItem("language") || "English";
-            setLanguage(currentLanguage);
-        });
-
-        function changeLanguage() {
-            var currentLanguage = localStorage.getItem("language") || "English";
-            var button = document.getElementById("language-switcher").querySelector("button");
-            var homeLink = document.getElementById("home-link");
-            var fundraisingLink = document.getElementById("fundraising-link");
-            var volunteerLink = document.getElementById("volunteer-link");
-
-            if (currentLanguage === "Português") {
-                button.textContent = "English";
-                homeLink.textContent = "Início";
-                fundraisingLink.textContent = "Arrecadação de Fundos";
-                volunteerLink.textContent = "Voluntariado";
-            } else {
-                button.textContent = "Português";
-                homeLink.textContent = "Home";
-                fundraisingLink.textContent = "Fundraising";
-                volunteerLink.textContent = "Volunteering";
-            }
-        }
-    </script>
 </body>
 </html>
