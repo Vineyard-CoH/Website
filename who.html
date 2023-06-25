@@ -18,7 +18,7 @@
     </header>
 
     <nav id="navigation">
-        <script src="helpnav.html"></script>
+        <div id="navigation-placeholder"></div>
     </nav>
     
     <div id="content">
@@ -28,6 +28,20 @@
     <footer>
         &copy; 2023 Vineyard Committee on Hunger. Entre em contato com o webmaster em webmaster@vineyardhunger.org
     </footer>
-    
+
+    <script>
+        // Load the navigation content dynamically
+        window.addEventListener('DOMContentLoaded', function() {
+            var navigationPlaceholder = document.getElementById('navigation-placeholder');
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'whonav.html', true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    navigationPlaceholder.innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send();
+        });
+    </script>
 </body>
 </html>
