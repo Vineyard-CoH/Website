@@ -35,6 +35,8 @@ header #header-content {
     width: 100%;
     justify-content: space-between;
     padding: 0 10px; /* Add padding to prevent text from blocking the corners */
+    position: relative; /* Add position relative to allow z-index to work */
+    z-index: 2; /* Set a higher z-index to ensure header text appears above other elements */
 }
 
 header #header-content img {
@@ -49,6 +51,8 @@ header h1 {
     text-align: center;
     flex-grow: 1;
     word-break: break-word; /* Allow line break within words */
+    position: relative; /* Add position relative to allow z-index to work */
+    z-index: 1; /* Set a lower z-index to push the header text behind other elements */
 }
 
 @media (max-width: 768px) {
@@ -63,8 +67,6 @@ header h1 {
     header h1 {
         font-size: 24px; /* Adjust the font size as needed */
     }
-
-
     
     /* Split "Vineyard Committee" and "On Hunger" onto two lines */
     header #header-content h1 span {
