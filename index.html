@@ -3,64 +3,12 @@
 <head>
     <title>Vineyard Committee on Hunger</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="translation.css">
+    <script src="translation.js"></script>
+    <script src="translations_en.js"></script>
+    <script src="translations_pt.js"></script>
     <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-        
-        body {
-            background-color: #000000;
-            font-family: Courier New, monospace;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        header {
-            background-color: #800080;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        header h1 {
-            color: #FFFFFF;
-            font-size: 24px;
-            margin: 0;
-            flex-grow: 1; /* Added flex-grow */
-        }
-
-        #language-switcher {
-            margin-right: 10px; /* Moved to the right */
-        }
-
-        #language-switcher button {
-            background: none;
-            border: none;
-            color: #FFFFFF;
-            cursor: pointer;
-            font-size: 16px;
-            text-decoration: underline;
-            outline: none;
-        }
-
-        #logo {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            height: 50px;
-        }
-        
-        #content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        
         #navigation {
             display: flex;
             flex-direction: column;
@@ -71,6 +19,7 @@
         #navigation-row {
             display: flex;
             justify-content: center;
+            left: 10px;
         }
         
         #navigation a {
@@ -79,26 +28,10 @@
             color: #FFFFFF;
             margin: 10px;
             transition: background-color 0.3s, color 0.3s;
-            font-size: 28px;
-            background-color: #800080;
-        }
-        
-        #navigation a:hover {
-            background-color: yellow;
-            color: #000000;
-        }
-        
-        footer {
+            font-size: 32px;
             background-color: #800080;
             padding: 10px;
-            color: #FFFFFF;
-            text-align: center;
-        }
-        
-        @media (max-width: 768px) {
-            #navigation a {
-                font-size: 22px;
-            }
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -113,49 +46,45 @@
     <div id="content">
         <div id="navigation">
             <div id="navigation-row">
-                <a href="food.html">Eu Preciso de Comida</a>
-                <a href="help.html">Eu Quero Ajudar</a>
+                <a href="food.html">I Need Food</a>
+                <a href="help.html">I Want to Help</a>
             </div>
-            <a href="who.html">Quem Somos</a>
+            <a href="who.html">Who We Are</a>
         </div>
     </div>
     <footer>
-        &copy; 2023 Vineyard Committee on Hunger. Entre em contato com o webmaster em webmaster@vineyardhunger.org
+        &copy; 2023 Vineyard Committee on Hunger. Contact the webmaster at webmaster@vineyardhunger.org
     </footer>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        function changeLanguage() {
+            var languageSwitcher = document.getElementById("language-switcher");
+            var button = languageSwitcher.querySelector("button");
+            var currentLanguage = button.textContent;
+
+            var foodLink = document.querySelector("#navigation a[href='food.html']");
+            var helpLink = document.querySelector("#navigation a[href='help.html']");
+            var whoLink = document.querySelector("#navigation a[href='who.html']");
+            var footerText = document.querySelector("footer");
+
+            if (currentLanguage === "Português") {
+                // Change text to Portuguese
+                button.textContent = "English";
+                foodLink.textContent = translations_pt["I Need Food"];
+                helpLink.textContent = translations_pt["I Want to Help"];
+                whoLink.textContent = translations_pt["Who We Are"];
+                footerText.innerHTML = "&copy; 2023 Vineyard Committee on Hunger. Entre em contato com o webmaster em webmaster@vineyardhunger.org";
+            } else {
+                // Change text to English
+                button.textContent = "Português";
+                foodLink.textContent = translations_en["I Need Food"];
+                helpLink.textContent = translations_en["I Want to Help"];
+                whoLink.textContent = translations_en["Who We Are"];
+                footerText.innerHTML = "&copy; 2023 Vineyard Committee on Hunger. Contact the webmaster at webmaster@vineyardhunger.org";
+            }
+        }
+        
         // Set default language to English
         changeLanguage();
-    });
-
-    function changeLanguage() {
-        var languageSwitcher = document.getElementById("language-switcher");
-        var button = languageSwitcher.querySelector("button");
-        var currentLanguage = button.textContent;
-
-        var foodLink = document.querySelector("#navigation a[href='food.html']");
-        var helpLink = document.querySelector("#navigation a[href='help.html']");
-        var whoLink = document.querySelector("#navigation a[href='who.html']");
-        var footerText = document.querySelector("footer");
-
-        if (currentLanguage === "Português") {
-            // Change text to Portuguese
-            button.textContent = "English";
-            foodLink.textContent = "Eu Preciso de Comida";
-            helpLink.textContent = "Eu Quero Ajudar";
-            whoLink.textContent = "Quem Somos";
-            footerText.innerHTML = "&copy; 2023 Vineyard Committee on Hunger. Entre em contato com o webmaster em webmaster@vineyardhunger.org";
-        } else {
-            // Change text to English
-            button.textContent = "Português";
-            foodLink.textContent = "I Need Food";
-            helpLink.textContent = "I Want to Help";
-            whoLink.textContent = "Who We Are";
-            footerText.innerHTML = "&copy; 2023 Vineyard Committee on Hunger. Contact the webmaster at webmaster@vineyardhunger.org";
-        }
-    }
     </script>
 </body>
 </html>
-
-

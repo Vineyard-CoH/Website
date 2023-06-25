@@ -1,31 +1,26 @@
-document.addEventListener("DOMContentLoaded", function() {
-  // Set default language to English
-  changeLanguage();
-});
-
 function changeLanguage() {
   var languageSwitcher = document.getElementById("language-switcher");
   var button = languageSwitcher.querySelector("button");
   var currentLanguage = button.textContent;
 
-  var foodLink = document.querySelector("#navigation a[href='food.php']");
-  var helpLink = document.querySelector("#navigation a[href='help.php']");
-  var whoLink = document.querySelector("#navigation a[href='who.php']");
+  var foodLink = document.querySelector("#navigation a[href='food.html']");
+  var helpLink = document.querySelector("#navigation a[href='help.html']");
+  var whoLink = document.querySelector("#navigation a[href='who.html']");
   var footerText = document.querySelector("footer");
 
+  var translations;
+
   if (currentLanguage === "Português") {
-    // Change text to Portuguese
-    button.textContent = "English";
-    foodLink.textContent = "Eu Preciso de Comida";
-    helpLink.textContent = "Eu Quero Ajudar";
-    whoLink.textContent = "Quem Somos";
-    footerText.innerHTML = "&copy; 2023 Vineyard Committee on Hunger. Entre em contato com o webmaster em webmaster@vineyardhunger.org";
+      // Change text to Portuguese
+      button.textContent = "English";
+      translations = translations_pt;
   } else {
-    // Change text to English
-    button.textContent = "Português";
-    foodLink.textContent = "I Need Food";
-    helpLink.textContent = "I Want to Help";
-    whoLink.textContent = "Who We Are";
-    footerText.innerHTML = "&copy; 2023 Vineyard Committee on Hunger. Contact the webmaster at webmaster@vineyardhunger.org";
+      // Change text to English
+      button.textContent = "Português";
+      translations = translations_en;
   }
+
+  foodLink.textContent = translations["I Need Food"];
+  helpLink.textContent = translations["I Want to Help"];
+  whoLink.textContent = translations["Who We Are"];
 }

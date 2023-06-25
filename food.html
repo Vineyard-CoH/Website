@@ -3,36 +3,50 @@
 <head>
     <title>I Need Food</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="translation.css">
     <script src="translation.js"></script>
+    <script src="translations_en.js"></script>
+    <script src="translations_pt.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Set default language to English
+        changeLanguage();
+    });
+    </script>
     <style>
-        /* Add any additional styles specific to the who_qualifies.html page here */
+        /* Add any additional styles specific to the food.html page here */
     </style>
 </head>
 <body>
     <header>
-        <div id="language-switcher">
-            <button onclick="changeLanguage()">Português</button>
+        <div id="header-content">
+            <div id="language-switcher">
+                <button onclick="changeLanguage()">Português</button>
+            </div>
+            <div id="logo-container">
+                <img src="images/VCOH.jpg" alt="VCOH Logo" id="logo">
+            </div>
+            <h1>Vineyard Committee on Hunger</h1>
         </div>
-        <h1>Vineyard Committee on Hunger</h1>
-        <nav id="navigation">
-            <a href="index.html" id="home-link">Home</a>
-            <a href="who_qualifies.html" id="who-link">Who Qualifies</a>
-            <a href="serving_hands.html" id="serving-link">Serving Hands</a>
-            <a href="family_to_family.html" id="family-link">Family to Family</a>
-            <a href="food_baskets.html" id="food-link">Food Baskets</a>
-            <a href="other_food_charities.html" id="other-link">Other Food Charities</a>
-        </nav>
     </header>
-    
+
+    <nav id="navigation">
+        <a href="index.html" id="home-link">Home</a>
+        <a href="who_qualifies.html" id="who-link">Who Qualifies</a>
+        <a href="serving_hands.html" id="serving-link">Serving Hands</a>
+        <a href="family_to_family.html" id="family-link">Family to Family</a>
+        <a href="food_baskets.html" id="food-link">Food Baskets</a>
+        <a href="other_food_charities.html" id="other-link">Other Food Charities</a>
+    </nav>
+
     <div id="content">
-        <!-- Add the content specific to the who_qualifies.html page here -->
+        <!-- Add the content specific to the food.html page here -->
     </div>
-    
+
     <footer>
         &copy; 2023 Vineyard Committee on Hunger. Entre em contato com o webmaster em webmaster@vineyardhunger.org
     </footer>
-    
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             // Set default language based on stored value or English as fallback
@@ -49,7 +63,7 @@
             var familyLink = document.getElementById("family-link");
             var foodLink = document.getElementById("food-link");
             var otherLink = document.getElementById("other-link");
-            
+
             if (currentLanguage === "Português") {
                 button.textContent = "English";
                 homeLink.textContent = "Início";
