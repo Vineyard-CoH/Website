@@ -37,7 +37,7 @@
         <img src="images/VCOH.jpg" alt="VCOH Logo" id="logo">
         <h1>Vineyard Committee on Hunger</h1>
         <div id="language-switcher">
-            <button onclick="changeLanguage()">Português</button>
+            <button onclick="changeLanguage()"></button>
         </div>
     </header>
     <div id="content">
@@ -52,11 +52,37 @@
     <footer>
         &copy; 2023 Vineyard Committee on Hunger. Contact the webmaster at webmaster@vineyardhunger.org
     </footer>
-    <script src="translation.js"></script>
-    <script src="translations_en.js"></script>
-    <script src="translations_pt.js"></script>
+    <script type="module" src="translations.js" crossorigin></script>
     <script>
-        // Set default language to English
+        const languages = {
+            "English": "Português",
+            "Português": "English"
+        };
+
+        let currentLanguage = "English";
+
+        function changeLanguage() {
+            const button = document.querySelector("#language-switcher button");
+            const foodLink = document.querySelector("#food-link");
+            const helpLink = document.querySelector("#help-link");
+            const whoLink = document.querySelector("#who-link");
+
+            if (currentLanguage === "English") {
+                currentLanguage = "Português";
+                button.textContent = languages[currentLanguage];
+                foodLink.textContent = translations[currentLanguage]["I Need Food"];
+                helpLink.textContent = translations[currentLanguage]["I Want to Help"];
+                whoLink.textContent = translations[currentLanguage]["Who We Are"];
+            } else {
+                currentLanguage = "English";
+                button.textContent = languages[currentLanguage];
+                foodLink.textContent = translations[currentLanguage]["I Need Food"];
+                helpLink.textContent = translations[currentLanguage]["I Want to Help"];
+                whoLink.textContent = translations[currentLanguage]["Who We Are"];
+            }
+        }
+
+        // Set the default language to English
         changeLanguage();
     </script>
 </body>
