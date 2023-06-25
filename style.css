@@ -13,7 +13,6 @@ html, body {
     height: 50px;
 }
 
-
 body {
     background-color: #000000;
     font-family: Courier New, monospace;
@@ -101,7 +100,7 @@ nav a {
 
 #language-switcher button:hover {
     background-color: yellow;
-    color: black
+    color: black;
 }
 
 footer {
@@ -113,6 +112,15 @@ footer {
 
 @media (max-width: 768px) {
     nav a {
-        font-size: 22px;
+        font-size: 18px; /* Adjust the font size for smaller screens */
+        padding: 8px; /* Adjust the padding for smaller screens */
+    }
+    
+    header #header-content img {
+        width: 40px; /* Adjust the logo size for smaller screens */
+    }
+    
+    header h1 {
+        font-size: 20px; /* Adjust the font size for smaller screens */
     }
 }

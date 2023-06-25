@@ -25,10 +25,17 @@
             color: #FFFFFF;
             margin: 10px;
             transition: background-color 0.3s, color 0.3s;
-            font-size: 32px;
+            font-size: 24px; /* Decreased font size for mobile */
             background-color: #800080;
             padding: 10px;
             border-radius: 10px;
+        }
+
+        /* Added responsive styles */
+        @media only screen and (max-width: 600px) {
+            #navigation a {
+                font-size: 20px; /* Further decreased font size for smaller mobile screens */
+            }
         }
     </style>
 </head>
@@ -60,6 +67,20 @@
         };
 
         let currentLanguage = "English";
+
+        // Translations object containing the translated text
+        const translations = {
+            "English": {
+                "I Need Food": "I Need Food",
+                "I Want to Help": "I Want to Help",
+                "Who We Are": "Who We Are"
+            },
+            "Português": {
+                "I Need Food": "Eu Preciso de Comida",
+                "I Want to Help": "Eu Quero Ajudar",
+                "Who We Are": "Quem Somos"
+            }
+        };
 
         function changeLanguage() {
             const button = document.querySelector("#language-switcher button");
