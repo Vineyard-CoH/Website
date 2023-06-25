@@ -1,3 +1,46 @@
+/* style.css */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 50px;
+}
+
+body {
+    background-color: #000000;
+    font-family: Courier New, monospace;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #800080;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+header #header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+header #header-content img {
+    width: 50px;
+    margin-right: 10px;
+}
 header h1 {
     color: #FFFFFF;
     font-size: 28px;
@@ -17,3 +60,73 @@ header h1 {
         display: block;
     }
 }
+
+#language-switcher {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#language-switcher button {
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: underline;
+    outline: none;
+}
+
+#content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav {
+    background-color: #800080;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: #FFFFFF;
+    margin: 10px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 28px;
+    background-color: #800080;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#navigation a:hover {
+    background-color: yellow;
+    color: #000000;
+}
+
+#language-switcher button:hover {
+    background-color: yellow;
+    color: black;
+}
+
+footer {
+    background-color: #800080;
+    padding: 10px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    nav a {
+        font-size: 18px;
+        padding: 8px;
+    }
+    
+    header #header-content img {
+        width: 40px;
+    }
