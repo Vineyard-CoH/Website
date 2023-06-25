@@ -48,6 +48,38 @@ header h1 {
     text-align: center;
     flex-grow: 1;
     word-break: break-word; /* Allow line break within words */
+    overflow-wrap: anywhere; /* Break words if necessary */
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 20px;
+    }
+    
+    /* Split "Vineyard Committee" and "On Hunger" onto two lines */
+    header #header-content h1 span {
+        display: block;
+    }
+    
+    /* Adjust position of the logo and language switcher for smaller screens */
+    header #header-content {
+        justify-content: flex-start;
+    }
+    
+    header #logo {
+        top: 10px;
+        left: 10px;
+    }
+    
+    #language-switcher {
+        top: 10px;
+        right: auto;
+        left: 10px;
+    }
+    
+    #language-switcher button {
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 768px) {
