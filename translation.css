@@ -1,0 +1,13 @@
+#language-switcher {
+  margin-right: 10px;
+}
+
+#language-switcher button {
+  background: none;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: underline;
+  outline: none;
+}

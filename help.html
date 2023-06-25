@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>I Want to Help</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="translation.css">
+    <script src="translation.js"></script>
+    <style>
+        /* Add any additional styles specific to the help.html page here */
+        .donate-bar {
+            background-color: green;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .donate-bar a {
+            color: #FFFFFF;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="language-switcher">
+            <button onclick="changeLanguage()">Português</button>
+        </div>
+        <h1>Vineyard Committee on Hunger</h1>
+        <nav id="navigation">
+            <a href="index.html" id="home-link">Home</a>
+            <a href="fundraising.html" id="fundraising-link">Fundraising</a>
+            <a href="volunteer.html" id="volunteer-link">Volunteering</a>
+        </nav>
+    </header>
+
+    <div class="donate-bar">
+        <a href="donate.html" target="_blank">Donate</a>
+    </div>
+    
+    <div id="content">
+        <!-- Add the content specific to the help.html page here -->
+    </div>
+    
+    <footer>
+        &copy; 2023 Vineyard Committee on Hunger. Entre em contato com o webmaster em webmaster@vineyardhunger.org
+    </footer>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Set default language based on stored value or English as fallback
+            var currentLanguage = localStorage.getItem("language") || "English";
+            setLanguage(currentLanguage);
+        });
+
+        function changeLanguage() {
+            var currentLanguage = localStorage.getItem("language") || "English";
+            var button = document.getElementById("language-switcher").querySelector("button");
+            var homeLink = document.getElementById("home-link");
+            var fundraisingLink = document.getElementById("fundraising-link");
+            var volunteerLink = document.getElementById("volunteer-link");
+
+            if (currentLanguage === "Português") {
+                button.textContent = "English";
+                homeLink.textContent = "Início";
+                fundraisingLink.textContent = "Arrecadação de Fundos";
+                volunteerLink.textContent = "Voluntariado";
+            } else {
+                button.textContent = "Português";
+                homeLink.textContent = "Home";
+                fundraisingLink.textContent = "Fundraising";
+                volunteerLink.textContent = "Volunteering";
+            }
+        }
+    </script>
+</body>
+</html>

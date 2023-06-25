@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>I Need Food</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="translation.css">
+    <script src="translation.js"></script>
+    <style>
+        /* Add any additional styles specific to the who_qualifies.html page here */
+    </style>
+</head>
+<body>
+    <header>
+        <div id="language-switcher">
+            <button onclick="changeLanguage()">Português</button>
+        </div>
+        <h1>Vineyard Committee on Hunger</h1>
+        <nav id="navigation">
+            <a href="who_qualifies.html" id="who-link">Who Qualifies</a>
+            <a href="serving_hands.html" id="serving-link">Serving Hands</a>
+            <a href="family_to_family.html" id="family-link">Family to Family</a>
+            <a href="food_baskets.html" id="food-link">Food Baskets</a>
+            <a href="other_food_charities.html" id="other-link">Other Food Charities</a>
+        </nav>
+    </header>
+    
+    <div id="content">
+        <!-- Add the content specific to the who_qualifies.html page here -->
+    </div>
+    
+    <footer>
+        &copy; 2023 Vineyard Committee on Hunger. Entre em contato com o webmaster em webmaster@vineyardhunger.org
+    </footer>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Set default language based on stored value or English as fallback
+            var currentLanguage = localStorage.getItem("language") || "English";
+            setLanguage(currentLanguage);
+        });
+
+        function changeLanguage() {
+            var currentLanguage = localStorage.getItem("language") || "English";
+            var button = document.getElementById("language-switcher").querySelector("button");
+            var whoLink = document.getElementById("who-link");
+            var servingLink = document.getElementById("serving-link");
+            var familyLink = document.getElementById("family-link");
+            var foodLink = document.getElementById("food-link");
+            var otherLink = document.getElementById("other-link");
+            
+            if (currentLanguage === "Português") {
+                button.textContent = "English";
+                whoLink.textContent = "Quem se Qualifica";
+                servingLink.textContent = "Mãos que Servem";
+                familyLink.textContent = "De Família para Família";
+                foodLink.textContent = "Cestas de Alimentos";
+                otherLink.textContent = "Outras Instituições de Alimentos";
+            } else {
+                button.textContent = "Português";
+                whoLink.textContent = "Who Qualifies";
+                servingLink.textContent = "Serving Hands";
+                familyLink.textContent = "Family to Family";
+                foodLink.textContent = "Food Baskets";
+                otherLink.textContent = "Other Food Charities";
+            }
+        }
+    </script>
+</body>
+</html>
