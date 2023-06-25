@@ -4,21 +4,8 @@
     <title>Who We Are</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="translation.css">
-    <script src="translation.js"></script>
     <style>
         /* Add any additional styles specific to the who_we_are.html page here */
-        .donate-bar {
-            background-color: green;
-            padding: 10px;
-            text-align: center;
-        }
-
-        .donate-bar a {
-            color: #FFFFFF;
-            font-weight: bold;
-            text-decoration: none;
-        }
     </style>
 </head>
 <body>
@@ -28,20 +15,11 @@
             <button onclick="changeLanguage()">Português</button>
         </div>
         <h1>Vineyard Committee on Hunger</h1>
-
     </header>
 
     <nav id="navigation">
-        <a href="index.html" id="home-link">Home</a>
-        <a href="about.html" id="about-link">About us</a>
-        <a href="contact.html" id="contact-link">Contact Info</a>
-        <a href="stats.html" id="stats-link">Our Stats</a>
-        <a href="gallery.html" id="gallery-link">Gallery</a>
+        <script src="helpnav.html"></script>
     </nav>
-
-    <div class="donate-bar">
-        <a href="donate.html" target="_blank">Donate</a>
-    </div>
     
     <div id="content">
         <!-- Add the content specific to the who_we_are.html page here -->
@@ -51,38 +29,5 @@
         &copy; 2023 Vineyard Committee on Hunger. Entre em contato com o webmaster em webmaster@vineyardhunger.org
     </footer>
     
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Set default language based on stored value or English as fallback
-            var currentLanguage = localStorage.getItem("language") || "English";
-            setLanguage(currentLanguage);
-        });
-
-        function changeLanguage() {
-            var currentLanguage = localStorage.getItem("language") || "English";
-            var button = document.getElementById("language-switcher").querySelector("button");
-            var homeLink = document.getElementById("home-link");
-            var aboutLink = document.getElementById("about-link");
-            var contactLink = document.getElementById("contact-link");
-            var statsLink = document.getElementById("stats-link");
-            var galleryLink = document.getElementById("gallery-link");
-
-            if (currentLanguage === "Português") {
-                button.textContent = "English";
-                homeLink.textContent = "Início";
-                aboutLink.textContent = "Sobre nós";
-                contactLink.textContent = "Informações de Contato";
-                statsLink.textContent = "Nossas Estatísticas";
-                galleryLink.textContent = "Galeria";
-            } else {
-                button.textContent = "Português";
-                homeLink.textContent = "Home";
-                aboutLink.textContent = "About us";
-                contactLink.textContent = "Contact Info";
-                statsLink.textContent = "Our Stats";
-                galleryLink.textContent = "Gallery";
-            }
-        }
-    </script>
 </body>
 </html>
