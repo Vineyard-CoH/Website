@@ -89,6 +89,9 @@ nav a {
     margin: 10px;
     transition: background-color 0.3s, color 0.3s;
     font-size: 28px;
+    background-color: #800080;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 #navigation a:hover {
