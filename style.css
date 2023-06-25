@@ -27,27 +27,27 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; /* Add position relative to create a positioning context */
+    position: relative;
 }
 
 header #header-content {
     display: flex;
     align-items: center;
-    width: 100%; /* Take up the full width of the header */
-    justify-content: space-between; /* Position the elements at the edges */
+    width: 100%;
+    justify-content: space-between;
 }
 
 header #header-content img {
-    width: 50px; /* Adjust the width as needed */
-    margin-right: 10px; /* Add margin to create spacing between logo and title */
+    width: 50px;
+    margin-right: 10px;
 }
 
 header h1 {
     color: #FFFFFF;
     font-size: 24px;
     margin: 0;
-    text-align: center; /* Center align the title */
-    flex-grow: 1; /* Allow the title to grow and take up remaining space */
+    text-align: center;
+    flex-grow: 1;
 }
 
 #language-switcher {
@@ -78,7 +78,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px; /* Add margin-top to create space between header and navigation */
+    margin-top: 10px;
 }
 
 nav a {
@@ -112,15 +112,15 @@ footer {
 
 @media (max-width: 768px) {
     nav a {
-        font-size: 18px; /* Adjust the font size for smaller screens */
-        padding: 8px; /* Adjust the padding for smaller screens */
+        font-size: 18px;
+        padding: 8px;
     }
     
     header #header-content img {
-        width: 40px; /* Adjust the logo size for smaller screens */
+        width: 40px;
     }
     
     header h1 {
-        font-size: 20px; /* Adjust the font size for smaller screens */
+        font-size: 20px;
     }
 }
