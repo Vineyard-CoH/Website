@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="translation.css">
-    <script src="translation.js"></script>
     <script src="translations_en.js"></script>
     <script src="translations_pt.js"></script>
     <style>
@@ -46,45 +45,19 @@
     <div id="content">
         <div id="navigation">
             <div id="navigation-row">
-                <a href="food.html">I Need Food</a>
-                <a href="help.html">I Want to Help</a>
+                <a href="food.html" id="food-link">I Need Food</a>
+                <a href="help.html" id="help-link">I Want to Help</a>
             </div>
-            <a href="who.html">Who We Are</a>
+            <a href="who.html" id="who-link">Who We Are</a>
         </div>
     </div>
     <footer>
         &copy; 2023 Vineyard Committee on Hunger. Contact the webmaster at webmaster@vineyardhunger.org
     </footer>
     <script>
-        function changeLanguage() {
-            var languageSwitcher = document.getElementById("language-switcher");
-            var button = languageSwitcher.querySelector("button");
-            var currentLanguage = button.textContent;
-
-            var foodLink = document.querySelector("#navigation a[href='food.html']");
-            var helpLink = document.querySelector("#navigation a[href='help.html']");
-            var whoLink = document.querySelector("#navigation a[href='who.html']");
-            var footerText = document.querySelector("footer");
-
-            if (currentLanguage === "Português") {
-                // Change text to Portuguese
-                button.textContent = "English";
-                foodLink.textContent = translations_pt["I Need Food"];
-                helpLink.textContent = translations_pt["I Want to Help"];
-                whoLink.textContent = translations_pt["Who We Are"];
-                footerText.innerHTML = "&copy; 2023 Vineyard Committee on Hunger. Entre em contato com o webmaster em webmaster@vineyardhunger.org";
-            } else {
-                // Change text to English
-                button.textContent = "Português";
-                foodLink.textContent = translations_en["I Need Food"];
-                helpLink.textContent = translations_en["I Want to Help"];
-                whoLink.textContent = translations_en["Who We Are"];
-                footerText.innerHTML = "&copy; 2023 Vineyard Committee on Hunger. Contact the webmaster at webmaster@vineyardhunger.org";
-            }
-        }
-        
         // Set default language to English
         changeLanguage();
     </script>
+    <script src="translation.js"></script>
 </body>
 </html>
