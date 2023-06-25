@@ -25,7 +25,6 @@ header {
     background-color: #800080;
     padding: 10px;
     display: flex;
-    justify-content: center;
     align-items: center;
     position: relative;
 }
@@ -35,12 +34,14 @@ header #header-content {
     align-items: center;
     width: 100%;
     justify-content: space-between;
+    padding: 0 10px; /* Add padding to prevent text from blocking the corners */
 }
 
 header #header-content img {
     width: 50px;
     margin-right: 10px;
 }
+
 header h1 {
     color: #FFFFFF;
     font-size: 28px;
@@ -48,13 +49,22 @@ header h1 {
     text-align: center;
     flex-grow: 1;
     word-break: break-word; /* Allow line break within words */
-    overflow-wrap: anywhere; /* Break words if necessary */
 }
 
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 20px;
+    header #header-content {
+        padding: 0; /* Remove the padding on smaller screens */
     }
+
+    header #header-content img {
+        width: 40px;
+    }
+
+    header h1 {
+        font-size: 24px; /* Adjust the font size as needed */
+    }
+
+
     
     /* Split "Vineyard Committee" and "On Hunger" onto two lines */
     header #header-content h1 span {
