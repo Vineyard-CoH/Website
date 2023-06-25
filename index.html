@@ -4,7 +4,6 @@
     <title>Vineyard Committee on Hunger</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="translation.css">
     <style>
         #navigation {
             display: flex;
@@ -60,51 +59,6 @@
         &copy; 2023 Vineyard Committee on Hunger. Contact the webmaster at webmaster@vineyardhunger.org
     </footer>
     <script type="module" src="translations.js" crossorigin></script>
-    <script>
-        const languages = {
-            "English": "Português",
-            "Português": "English"
-        };
 
-        let currentLanguage = "English";
-
-        // Translations object containing the translated text
-        const translations = {
-            "English": {
-                "I Need Food": "I Need Food",
-                "I Want to Help": "I Want to Help",
-                "Who We Are": "Who We Are"
-            },
-            "Português": {
-                "I Need Food": "Eu Preciso de Comida",
-                "I Want to Help": "Eu Quero Ajudar",
-                "Who We Are": "Quem Somos"
-            }
-        };
-
-        function changeLanguage() {
-            const button = document.querySelector("#language-switcher button");
-            const foodLink = document.querySelector("#food-link");
-            const helpLink = document.querySelector("#help-link");
-            const whoLink = document.querySelector("#who-link");
-
-            if (currentLanguage === "English") {
-                currentLanguage = "Português";
-                button.textContent = languages[currentLanguage];
-                foodLink.textContent = translations[currentLanguage]["I Need Food"];
-                helpLink.textContent = translations[currentLanguage]["I Want to Help"];
-                whoLink.textContent = translations[currentLanguage]["Who We Are"];
-            } else {
-                currentLanguage = "English";
-                button.textContent = languages[currentLanguage];
-                foodLink.textContent = translations[currentLanguage]["I Need Food"];
-                helpLink.textContent = translations[currentLanguage]["I Want to Help"];
-                whoLink.textContent = translations[currentLanguage]["Who We Are"];
-            }
-        }
-
-        // Set the default language to English
-        changeLanguage();
-    </script>
 </body>
 </html>
