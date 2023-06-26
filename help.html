@@ -19,25 +19,27 @@
         }
         
         #navigation {
-            display: none;
-            position: fixed;
-            bottom: 60px;
-            right: 10px;
-            background-color: #800080;
-            color: #FFFFFF;
-            padding: 10px;
-            border-radius: 10px;
-            font-size: 20px;
-            max-height: 200px;
-            overflow-y: auto;
-        }
-        
-        #navigation a {
-            display: block;
-            text-decoration: none;
-            color: #FFFFFF;
-            margin: 5px;
-        }
+  display: none;
+  position: absolute;
+  right: 10px;
+  bottom: 60px; /* Adjust the positioning to leave space above the footer */
+  background-color: #800080;
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 1; /* Ensure the navigation menu is positioned above the content and footer */
+}
+
+#navigation a {
+  display: block;
+  text-decoration: none;
+  color: #FFFFFF;
+  margin: 10px;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 24px;
+  background-color: #800080;
+  padding: 10px;
+  border-radius: 10px;
+}
     </style>
 </head>
 <body>
