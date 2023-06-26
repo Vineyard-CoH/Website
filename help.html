@@ -19,27 +19,27 @@
         }
         
         #navigation {
-  display: none;
-  position: absolute;
-  right: 10px;
-  bottom: 60px; /* Adjust the positioning to leave space above the footer */
-  background-color: #800080;
-  padding: 10px;
-  border-radius: 10px;
-  z-index: 1; /* Ensure the navigation menu is positioned above the content and footer */
-}
-
-#navigation a {
-  display: block;
-  text-decoration: none;
-  color: #FFFFFF;
-  margin: 10px;
-  transition: background-color 0.3s, color 0.3s;
-  font-size: 24px;
-  background-color: #800080;
-  padding: 10px;
-  border-radius: 10px;
-}
+            display: none;
+            position: absolute;
+            right: 10px;
+            bottom: 60px; /* Adjust the positioning to leave space above the footer */
+            background-color: #800080;
+            padding: 10px;
+            border-radius: 10px;
+            z-index: 1; /* Ensure the navigation menu is positioned above the content and footer */
+        }
+        
+        #navigation a {
+            display: block;
+            text-decoration: none;
+            color: #FFFFFF;
+            margin: 10px;
+            transition: background-color 0.3s, color 0.3s;
+            font-size: 24px;
+            background-color: #800080;
+            padding: 10px;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
@@ -51,60 +51,35 @@
     </header>
 
     <nav id="navigation">
-        <div id="navigation-placeholder"></div>
+        <a href="index.html" id="home-link">Home</a>
+        <a href="volunteering.html" id="about-link">Volunteering</a>
+        <a href="fundraising.html" id="contact-link">Fundraising</a>
+        <a href="donation.html" id="stats-link">Donate</a>
     </nav>
-
+    
     <div id="content">
         <!-- Add the content specific to the help.html page here -->
     </div>
-    
-    <button id="menu-button" onclick="toggleNavigation()">Menu</button>
     
     <footer>
         &copy; 2023 Vineyard Committee on Hunger. Contact the webmaster at webmaster@vineyardhunger.org
     </footer>
 
     <script>
-        // Load the navigation content dynamically
-        window.addEventListener('DOMContentLoaded', function() {
-            var navigationPlaceholder = document.getElementById('navigation-placeholder');
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'helpnav.html', true);
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    navigationPlaceholder.innerHTML = xhr.responseText;
-                }
-            };
-            xhr.send();
-        });
+        var navigationVisible = false;
+        var menuButton = document.getElementById('menu-button');
+        var navigation = document.getElementById('navigation');
 
+        function toggleNavigation() {
+            navigationVisible = !navigationVisible;
+            if (navigationVisible) {
+                navigation.style.display = 'block';
+            } else {
+                navigation.style.display = 'none';
+            }
+        }
 
-// Function to toggle the navigation menu and load its content
-function toggleNavigation() {
-  var navigation = document.getElementById('navigation');
-  var navigationPlaceholder = document.getElementById('navigation-placeholder');
-  
-  if (navigation.style.display === 'none') {
-    navigation.style.display = 'block';
-    loadNavigationContent(navigationPlaceholder);
-  } else {
-    navigation.style.display = 'none';
-  }
-}
-
-// Function to load the navigation content dynamically
-function loadNavigationContent(placeholder) {
-  var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'helpnav.html', true);
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-      placeholder.innerHTML = xhr.responseText;
-    }
-  };
-  xhr.send();
-}
-
-
+        menuButton.addEventListener('click', toggleNavigation);
     </script>
 </body>
 </html>
