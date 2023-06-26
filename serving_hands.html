@@ -4,43 +4,52 @@
     <title>The Vineyard Committee on Hunger</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
-        /* Styles for the serving_hands.html page */
-        .calendar {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin-top: 20px;
-        }
-        
-        .month {
-            flex-basis: calc(25% - 20px);
-            margin-bottom: 20px;
-        }
-        
-        .month-name {
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        
-        .month-dates {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            grid-gap: 5px;
-        }
-        
-        .date {
-            padding: 5px;
-            text-align: center;
-            border: 1px solid white;
-            background-color: transparent;
-        }
-        
-        .highlight {
-            background-color: purple;
-            color: white;
-            font-weight: bold;
-        }
+       /* Styles for the serving_hands.html page */
+.calendar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.month {
+    flex-basis: calc(25% - 20px);
+    margin-bottom: 20px;
+}
+
+.month-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.month-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+}
+
+.date {
+    padding: 5px;
+    text-align: center;
+    border: 1px solid white;
+    background-color: #800080; /* Set a vibrant background color */
+    color: white; /* Set text color to white */
+    font-weight: bold;
+    border-radius: 50%; /* Round the corners of the dates */
+    transition: background-color 0.3s, color 0.3s; /* Add a smooth transition effect */
+}
+
+.date:hover {
+    background-color: white; /* Change background color on hover */
+    color: #800080; /* Change text color on hover */
+}
+
+.highlight {
+    background-color: purple;
+    color: white;
+    font-weight: bold;
+}
     </style>
 </head>
 <body>
