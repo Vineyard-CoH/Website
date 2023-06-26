@@ -6,6 +6,10 @@ html, body {
     flex-direction: column;
 }
 
+body {
+    position: relative; /* Add positioning to body */
+}
+
 #content {
     flex: 1;
     display: flex;
@@ -18,7 +22,11 @@ footer {
     padding: 10px;
     color: #FFFFFF;
     text-align: center;
+    position: absolute; /* Position the footer */
+    bottom: 0; /* Stick it to the bottom */
+    width: 100%; /* Make it full-width */
 }
+
 
 #logo {
     position: absolute;
