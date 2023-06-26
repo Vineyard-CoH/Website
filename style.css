@@ -42,14 +42,6 @@ header #header-content img {
     margin-right: 10px; /* Add margin to create spacing between logo and title */
 }
 
-header h1 {
-    color: #FFFFFF;
-    font-size: 24px;
-    margin: 0;
-    text-align: center; /* Center align the title */
-    flex-grow: 1; /* Allow the title to grow and take up remaining space */
-}
-
 #language-switcher {
     position: absolute;
     top: 10px;
