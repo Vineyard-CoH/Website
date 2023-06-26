@@ -89,6 +89,19 @@ function toggleNavigation() {
   }
 }
 
+// Function to toggle the navigation menu and load its content
+function toggleNavigation() {
+  var navigation = document.getElementById('navigation');
+  var navigationPlaceholder = document.getElementById('navigation-placeholder');
+  
+  if (navigation.style.display === 'none') {
+    navigation.style.display = 'block';
+    loadNavigationContent(navigationPlaceholder);
+  } else {
+    navigation.style.display = 'none';
+  }
+}
+
 // Function to load the navigation content dynamically
 function loadNavigationContent(placeholder) {
   var xhr = new XMLHttpRequest();
@@ -100,6 +113,7 @@ function loadNavigationContent(placeholder) {
   };
   xhr.send();
 }
+
 
     </script>
 </body>
