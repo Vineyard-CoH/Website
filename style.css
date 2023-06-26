@@ -91,7 +91,7 @@ nav a {
 /* Mobile Responsiveness */
 @media only screen and (max-width: 600px) {
     nav {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
     }
 
     nav a {
