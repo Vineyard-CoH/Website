@@ -130,4 +130,38 @@ nav a {
     text-decoration: none;
     color: #FFFFFF;
     margin: 10px;
-    transition: background-color 0
+    transition: background-color 0.3s, color 0.3s;
+    font-size:    28px;
+    background-color: #800080;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#navigation a:hover {
+    background-color: yellow;
+    color: #000000;
+}
+
+#language-switcher button:hover {
+    background-color: yellow;
+    color: black;
+}
+
+footer {
+    background-color: #800080;
+    padding: 10px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    nav a {
+        font-size: 18px;
+        padding: 8px;
+    }
+    
+    header #header-content img {
+        width: 40px;
+    }
+}
+
