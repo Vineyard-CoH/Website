@@ -68,7 +68,7 @@ nav {
 }
 
 nav a {
-    display: none; /* Hide navigation links by default */
+    display: block;
     text-decoration: none;
     color: #FFFFFF;
     margin: 10px;
@@ -77,6 +77,10 @@ nav a {
     background-color: #800080;
     padding: 10px;
     border-radius: 10px;
+    flex-shrink: 1; /* Allow the navigation links to shrink */
+    overflow: hidden; /* Hide any overflowing content */
+    text-overflow: ellipsis; /* Add ellipsis (...) for truncated text */
+    white-space: nowrap; /* Prevent wrapping of navigation links */
 }
 
 #navigation a:hover {
@@ -84,38 +88,19 @@ nav a {
     color: #000000;
 }
 
-#menu-toggle {
-    display: none; /* Hide the menu toggle button by default */
-    background: none;
-    border: none;
-    color: #FFFFFF;
-    cursor: pointer;
-    font-size: 16px;
-    text-decoration: underline;
-    outline: none;
-}
-
 /* Mobile Responsiveness */
 @media only screen and (max-width: 600px) {
     nav {
-        flex-direction: column; /* Change the direction to vertical */
-        align-items: flex-start; /* Adjust alignment for vertical layout */
+        flex-wrap: nowrap;
     }
 
     nav a {
-        display: block; /* Show navigation links in vertical layout */
         font-size: 20px;
         padding: 8px;
         margin: 5px;
-    }
-
-    #menu-toggle {
-        display: block; /* Show the menu toggle button in vertical layout */
-        margin-top: 10px;
-    }
-
-    #menu-toggle:focus + a {
-        display: block; /* Show navigation links when menu toggle is focused */
+        flex-grow: 1; /* Allow the navigation links to grow to fill the available space */
+        flex-basis: auto; /* Reset the flex-basis value to auto */
+        white-space: normal; /* Allow wrapping of navigation links */
     }
 }
 
