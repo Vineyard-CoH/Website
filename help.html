@@ -8,7 +8,7 @@
         /* Add any additional styles specific to the help.html page here */
         #menu-button {
             position: fixed;
-            bottom: 90px;
+            bottom: 10px;
             right: 10px;
             background-color: #800080;
             color: #FFFFFF;
@@ -16,18 +16,18 @@
             border-radius: 10px;
             font-size: 20px;
             cursor: pointer;
-            z-index: 2;
+            z-index: 2; /* Ensure the menu button is positioned above the footer */
         }
         
         #navigation {
             display: none;
             position: absolute;
             right: 10px;
-            bottom: calc(100% - 20px); /* Adjust the positioning to be just above the footer */
+            bottom: 130px; /* Adjust the positioning to leave space above the footer */
             background-color: #800080;
             padding: 10px;
             border-radius: 10px;
-            z-index: 1;
+            z-index: 1; /* Ensure the navigation menu is positioned above the content and footer */
         }
         
         #navigation a {
@@ -40,10 +40,6 @@
             background-color: #800080;
             padding: 10px;
             border-radius: 10px;
-        }
-        
-        footer {
-            position: relative; /* Ensure the footer is positioned relative to the page */
         }
     </style>
 </head>
