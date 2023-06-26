@@ -76,11 +76,31 @@
             xhr.send();
         });
 
-        // Function to toggle the navigation menu
-        function toggleNavigation() {
-            var navigation = document.getElementById('navigation');
-            navigation.style.display = navigation.style.display === 'none' ? 'block' : 'none';
-        }
+        // Function to toggle the navigation menu and load its content
+function toggleNavigation() {
+  var navigation = document.getElementById('navigation');
+  var navigationPlaceholder = document.getElementById('navigation-placeholder');
+  
+  if (navigation.style.display === 'none') {
+    navigation.style.display = 'block';
+    loadNavigationContent(navigationPlaceholder);
+  } else {
+    navigation.style.display = 'none';
+  }
+}
+
+// Function to load the navigation content dynamically
+function loadNavigationContent(placeholder) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'helpnav.html', true);
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      placeholder.innerHTML = xhr.responseText;
+    }
+  };
+  xhr.send();
+}
+
     </script>
 </body>
 </html>
