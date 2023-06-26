@@ -8,52 +8,35 @@
         /* Add any additional styles specific to the help.html page here */
         #menu-button {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 10px;
+            right: 10px;
             background-color: #800080;
             color: #FFFFFF;
-            border: none;
             padding: 10px;
-            border-radius: 50%;
-            font-size: 24px;
+            border-radius: 10px;
+            font-size: 20px;
             cursor: pointer;
-            z-index: 2;
         }
-
-        #menu-button:hover {
-            background-color: yellow;
-        }
-
+        
         #navigation {
             display: none;
             position: fixed;
-            bottom: 70px;
-            right: 20px;
-            width: 200px;
+            bottom: 60px;
+            right: 10px;
             background-color: #800080;
             color: #FFFFFF;
-            padding: 20px;
-            z-index: 1;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 20px;
+            max-height: 200px;
+            overflow-y: auto;
         }
-
-        #navigation.show {
+        
+        #navigation a {
             display: block;
-        }
-
-        @media only screen and (min-width: 600px) {
-            #menu-button {
-                display: none;
-            }
-
-            #navigation {
-                display: flex;
-                position: static;
-                width: auto;
-                background-color: transparent;
-                color: #FFFFFF;
-                padding: 0;
-                z-index: 0;
-            }
+            text-decoration: none;
+            color: #FFFFFF;
+            margin: 5px;
         }
     </style>
 </head>
@@ -68,16 +51,16 @@
     <nav id="navigation">
         <div id="navigation-placeholder"></div>
     </nav>
-    
+
     <div id="content">
         <!-- Add the content specific to the help.html page here -->
     </div>
     
+    <button id="menu-button" onclick="toggleNavigation()">Menu</button>
+    
     <footer>
         &copy; 2023 Vineyard Committee on Hunger. Contact the webmaster at webmaster@vineyardhunger.org
     </footer>
-
-    <button id="menu-button" onclick="toggleNavigation()">Menu</button>
 
     <script>
         // Load the navigation content dynamically
@@ -93,9 +76,10 @@
             xhr.send();
         });
 
+        // Function to toggle the navigation menu
         function toggleNavigation() {
             var navigation = document.getElementById('navigation');
-            navigation.classList.toggle('show');
+            navigation.style.display = navigation.style.display === 'none' ? 'block' : 'none';
         }
     </script>
 </body>
