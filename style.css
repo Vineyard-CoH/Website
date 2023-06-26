@@ -72,28 +72,6 @@ body {
     display: flex;
 }
 
-.link-container a {
-    text-decoration: none;
-    color: #FFFFFF;
-    margin: 10px;
-    transition: background-color 0.3s, color 0.3s;
-    font-size: 28px;
-    background-color: #800080;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-#who-link {
-    text-decoration: none;
-    color: #FFFFFF;
-    margin: 10px auto;
-    transition: background-color 0.3s, color 0.3s;
-    font-size: 28px;
-    background-color: #800080;
-    padding: 10px;
-    border-radius: 10px;
-}
-
 #navigation a:hover {
     background-color: yellow;
     color: #000000;
@@ -133,8 +111,6 @@ body {
     }
 }
 
-
-footer {
     background-color: #800080;
     padding: 10px;
     color: #FFFFFF;
