@@ -77,6 +77,7 @@ nav a {
     background-color: #800080;
     padding: 10px;
     border-radius: 10px;
+    white-space: nowrap;
 }
 
 #navigation a:hover {
@@ -87,7 +88,7 @@ nav a {
 /* Mobile Responsiveness */
 @media only screen and (max-width: 600px) {
     nav {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
     }
 
     nav a {
