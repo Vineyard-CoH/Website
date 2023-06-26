@@ -77,7 +77,10 @@ nav a {
     background-color: #800080;
     padding: 10px;
     border-radius: 10px;
-    white-space: nowrap;
+    flex-shrink: 1; /* Allow the navigation links to shrink */
+    overflow: hidden; /* Hide any overflowing content */
+    text-overflow: ellipsis; /* Add ellipsis (...) for truncated text */
+    white-space: nowrap; /* Prevent wrapping of navigation links */
 }
 
 #navigation a:hover {
@@ -88,15 +91,19 @@ nav a {
 /* Mobile Responsiveness */
 @media only screen and (max-width: 600px) {
     nav {
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
     }
 
     nav a {
         font-size: 20px;
         padding: 8px;
         margin: 5px;
+        flex-grow: 1; /* Allow the navigation links to grow to fill the available space */
+        flex-basis: auto; /* Reset the flex-basis value to auto */
+        white-space: normal; /* Allow wrapping of navigation links */
     }
 }
+
 
 
 #language-switcher button:hover {
