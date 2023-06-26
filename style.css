@@ -20,79 +20,6 @@ body {
     flex-direction: column;
 }
 
-header {
-    background-color: #800080;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-header #header-content {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: space-between;
-    padding: 0 10px; /* Add padding to prevent text from blocking the corners */
-    position: relative; /* Add position relative to allow z-index to work */
-    z-index: 2; /* Set a higher z-index to ensure header text appears above other elements */
-}
-
-header #header-content img {
-    width: 50px;
-    margin-right: 10px;
-}
-
-header h1 {
-    color: #FFFFFF;
-    font-size: 28px;
-    margin: 0;
-    text-align: center;
-    flex-grow: 1;
-    word-break: break-word; /* Allow line break within words */
-    position: relative; /* Add position relative to allow z-index to work */
-    z-index: 1; /* Set a lower z-index to push the header text behind other elements */
-}
-
-@media (max-width: 768px) {
-    header #header-content {
-        padding: 0; /* Remove the padding on smaller screens */
-    }
-
-    header #header-content img {
-        width: 40px;
-    }
-
-    header h1 {
-        font-size: 24px; /* Adjust the font size as needed */
-    }
-    
-    /* Split "Vineyard Committee" and "On Hunger" onto two lines */
-    header #header-content h1 span {
-        display: block;
-    }
-    
-    /* Adjust position of the logo and language switcher for smaller screens */
-    header #header-content {
-        justify-content: flex-start;
-    }
-    
-    header #logo {
-        top: 10px;
-        left: 10px;
-    }
-    
-    #language-switcher {
-        top: 10px;
-        right: auto;
-        left: 10px;
-    }
-    
-    #language-switcher button {
-        font-size: 14px;
-    }
-}
-
 #language-switcher {
     position: absolute;
     top: 10px;
@@ -107,13 +34,6 @@ header h1 {
     font-size: 16px;
     text-decoration: underline;
     outline: none;
-}
-
-#content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 nav {
@@ -131,7 +51,7 @@ nav a {
     color: #FFFFFF;
     margin: 10px;
     transition: background-color 0.3s, color 0.3s;
-    font-size:    28px;
+    font-size: 28px;
     background-color: #800080;
     padding: 10px;
     border-radius: 10px;
@@ -159,9 +79,4 @@ footer {
         font-size: 18px;
         padding: 8px;
     }
-    
-    header #header-content img {
-        width: 40px;
-    }
 }
-
