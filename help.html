@@ -8,7 +8,7 @@
         /* Add any additional styles specific to the help.html page here */
         #menu-button {
             position: fixed;
-            bottom: 80px; /* Adjust the distance from the bottom */
+            bottom: 60px; /* Adjust the distance from the bottom */
             right: 10px;
             background-color: #800080;
             color: #FFFFFF;
@@ -23,7 +23,7 @@
             display: none;
             position: absolute;
             right: 10px;
-            bottom: 120px; /* Adjust the positioning to be above the footer */
+            bottom: 100px; /* Adjust the positioning to be above the footer */
             background-color: #800080;
             padding: 10px;
             border-radius: 10px;
@@ -40,6 +40,17 @@
             background-color: #800080;
             padding: 10px;
             border-radius: 10px;
+        }
+
+        /* Media query for mobile browsers */
+        @media (max-width: 600px) {
+            #menu-button {
+                bottom: 90px; /* Adjust the distance from the bottom for mobile */
+            }
+            
+            #navigation {
+                bottom: 130px; /* Adjust the positioning to be above the footer for mobile */
+            }
         }
     </style>
 </head>
@@ -65,8 +76,6 @@
     <footer>
         &copy; 2023 Vineyard Committee on Hunger. Contact the webmaster at webmaster@vineyardhunger.org
     </footer>
-
-    <button id="menu-button" onclick="toggleNavigation()">Menu</button>
 
     <script>
         var navigationVisible = false;
