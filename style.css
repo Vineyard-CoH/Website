@@ -65,7 +65,6 @@ nav {
     justify-content: center;
     align-items: center;
     margin-top: 10px;
-    overflow-x: auto; /* Enable horizontal scrolling on smaller screens */
 }
 
 nav a {
