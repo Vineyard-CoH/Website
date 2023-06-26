@@ -6,6 +6,26 @@
     <link rel="stylesheet" href="style.css">
     <style>
         /* Add any additional styles specific to the help.html page here */
+        #menu-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #800080;
+            color: #FFFFFF;
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        #menu-button:hover {
+            background-color: yellow;
+        }
+
+        @media only screen and (min-width: 600px) {
+            #menu-button {
+                display: none;
             }
         }
     </style>
@@ -30,6 +50,8 @@
         &copy; 2023 Vineyard Committee on Hunger. Contact the webmaster at webmaster@vineyardhunger.org
     </footer>
 
+    <button id="menu-button" onclick="toggleNavigation()">Menu</button>
+
     <script>
         // Load the navigation content dynamically
         window.addEventListener('DOMContentLoaded', function() {
@@ -43,6 +65,11 @@
             };
             xhr.send();
         });
+
+        function toggleNavigation() {
+            var navigation = document.getElementById('navigation');
+            navigation.classList.toggle('show');
+        }
     </script>
 </body>
 </html>
