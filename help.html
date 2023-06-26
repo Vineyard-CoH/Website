@@ -16,13 +16,14 @@
             border-radius: 10px;
             font-size: 20px;
             cursor: pointer;
+            z-index: 2; /* Ensure the menu button is positioned above the footer */
         }
         
         #navigation {
             display: none;
             position: absolute;
             right: 10px;
-            bottom: 60px; /* Adjust the positioning to leave space above the footer */
+            bottom: 130px; /* Adjust the positioning to leave space above the footer */
             background-color: #800080;
             padding: 10px;
             border-radius: 10px;
@@ -65,6 +66,8 @@
         &copy; 2023 Vineyard Committee on Hunger. Contact the webmaster at webmaster@vineyardhunger.org
     </footer>
 
+    <button id="menu-button" onclick="toggleNavigation()">Menu</button>
+
     <script>
         var navigationVisible = false;
         var menuButton = document.getElementById('menu-button');
@@ -78,8 +81,6 @@
                 navigation.style.display = 'none';
             }
         }
-
-        menuButton.addEventListener('click', toggleNavigation);
     </script>
 </body>
 </html>
