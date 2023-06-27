@@ -6,6 +6,43 @@
     <link rel="stylesheet" href="style.css">
     <style>
         /* Add any additional styles specific to the who_we_are.html page here */
+    <style>
+        /* Add any additional styles specific to the help.html page here */
+        #menu-button {
+            position: fixed;
+            bottom: 90px;
+            right: 10px;
+            background-color: #800080;
+            color: #FFFFFF;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 2; /* Ensure the menu button is positioned above the footer */
+        }
+        
+        #navigation {
+            display: none;
+            position: absolute;
+            right: 10px;
+            bottom: 130px; /* Adjust the positioning to leave space above the footer */
+            background-color: #800080;
+            padding: 10px;
+            border-radius: 10px;
+            z-index: 1; /* Ensure the navigation menu is positioned above the content and footer */
+        }
+        
+        #navigation a {
+            display: block;
+            text-decoration: none;
+            color: #FFFFFF;
+            margin: 10px;
+            transition: background-color 0.3s, color 0.3s;
+            font-size: 24px;
+            background-color: #800080;
+            padding: 10px;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
@@ -16,31 +53,37 @@
         </div>
     </header>
 
-    <nav id="navigation">
-        <div id="navigation-placeholder"></div>
-    </nav>
+<nav id="navigation">
+<a href="index.html" id="home-link">Home</a>
+<a href="about.html" id="about-link">About us</a>
+<a href="stats.html" id="stats-link">Our Stats</a>
+<a href="gallery.html" id="gallery-link">Gallery</a>
+<a href="contact.html" id="contact-link">Contact Info</a>
+</nav>
     
     <div id="content">
-        <!-- Add the content specific to the who_we_are.html page here -->
+        <!-- Add the content specific to the help.html page here -->
     </div>
     
-<footer>
+    <footer>
         &copy; 2023 Vineyard Committee on Hunger. Contact the webmaster at webmaster@vineyardhunger.org
     </footer>
 
+    <button id="menu-button" onclick="toggleNavigation()">Menu</button>
+
     <script>
-        // Load the navigation content dynamically
-        window.addEventListener('DOMContentLoaded', function() {
-            var navigationPlaceholder = document.getElementById('navigation-placeholder');
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'whonav.html', true);
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    navigationPlaceholder.innerHTML = xhr.responseText;
-                }
-            };
-            xhr.send();
-        });
+        var navigationVisible = false;
+        var menuButton = document.getElementById('menu-button');
+        var navigation = document.getElementById('navigation');
+
+        function toggleNavigation() {
+            navigationVisible = !navigationVisible;
+            if (navigationVisible) {
+                navigation.style.display = 'block';
+            } else {
+                navigation.style.display = 'none';
+            }
+        }
     </script>
 </body>
 </html>
